@@ -19,7 +19,7 @@ class _ListCharacters extends State<ListCharacters> {
     final hash = 'bd51ac2c9dc95a9dbc5412b908776598';
 
     final url =
-        'https://gateway.marvel.com:443/v1/public/characters?ts=$ts&apikey=$apiKey&hash=$hash';
+        'https://gateway.marvel.com:443/v1/public/characters?ts=$ts&apikey=$apiKey&hash=$hash&limit=50';
 
     final response = await http.get(Uri.parse(url));
 
@@ -54,15 +54,10 @@ class _ListCharacters extends State<ListCharacters> {
                   final thumbnail = character['thumbnail']['path'] +
                       '.' +
                       character['thumbnail']['extension'];
-                  final user = character(name: name);
                   return ListTile(
                     leading: Image.network(thumbnail),
                     trailing: Icon(Icons.arrow_right),
                     title: Text(name),
-                    onTap: () {
-                      Navigator.pushNamed(context, 'detail_character',
-                          arguments: user);
-                    },
                   );
                 },
               ),
