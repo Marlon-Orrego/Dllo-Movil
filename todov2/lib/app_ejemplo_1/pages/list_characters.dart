@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:todov2/app_ejemplo_1/controller/User.dart';
 
 class ListCharacters extends StatefulWidget {
   @override
@@ -53,13 +54,14 @@ class _ListCharacters extends State<ListCharacters> {
                   final thumbnail = character['thumbnail']['path'] +
                       '.' +
                       character['thumbnail']['extension'];
+                  final user = character(name: name);
                   return ListTile(
                     leading: Image.network(thumbnail),
                     trailing: Icon(Icons.arrow_right),
                     title: Text(name),
                     onTap: () {
-                      Navigator.pushNamed(context, 'detail_user',
-                          arguments: character(name));
+                      Navigator.pushNamed(context, 'detail_character',
+                          arguments: user);
                     },
                   );
                 },
