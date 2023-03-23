@@ -23,27 +23,42 @@ class _MainAppEjemplo1 extends State<MainAppEjemplo1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Tareas"),
-      ),
       body: pages[currentlyIndex],
       bottomNavigationBar: Theme(
-        data: Theme.of(context).copyWith(),
+        data: Theme.of(context).copyWith(
+          // Cambia el color del texto del BottomNavigationBar a blanco
+          textTheme: Theme.of(context).textTheme.copyWith(
+                caption: TextStyle(color: Colors.white),
+              ),
+        ),
         child: BottomNavigationBar(
           onTap: changePage,
+          backgroundColor: Colors.black,
           currentIndex: currentlyIndex,
+          selectedItemColor: Color.fromARGB(255, 255, 0, 0),
+          unselectedItemColor: Color.fromARGB(255, 255, 255, 255),
           items: const [
             BottomNavigationBarItem(
-              label: "Inicio",
-              icon: Icon(Icons.home),
+              label: "INICIO",
+              icon: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
             ),
             BottomNavigationBarItem(
-              label: "Perfil",
-              icon: Icon(Icons.person),
+              label: "DAREDEVIL",
+              icon: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
+              backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
-              label: "Usuarios",
-              icon: Icon(Icons.people),
+              label: "PERSONAJES",
+              icon: Icon(
+                Icons.people,
+                color: Colors.white,
+              ),
             )
           ],
         ),

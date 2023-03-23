@@ -1,37 +1,51 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class Home extends StatefulWidget {
+Future<void> loadFont() async {
+  await rootBundle.load("assets/fonts/MarvelRegular-Dj83.ttf");
+}
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await loadFont();
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
   @override
-  State<StatefulWidget> createState() {
-    return _Home();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'My App',
+      home: Home(),
+    );
   }
 }
 
-class _Home extends State<Home> {
-  String clave = "";
-  bool? isActive = false;
-  void onChanged1(bool? value) {
-    setState(() {
-      isActive=value;
-      clave=value.toString();
-    });
-  }
-
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(10),
-      child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Checkbox(value: isActive, onChanged: onChanged1),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text("Click"),
+          children: <Widget>[
+            Image.asset(
+              'assets/images/marvel_logo.png',
+              width: 200.0,
+              height: 200.0,
             ),
-            Text(clave)
-          ]),
+            SizedBox(height: 16.0),
+            Text(
+              'MARVEL API',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'MarvelRegular',
+                  fontSize: 30.0),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
