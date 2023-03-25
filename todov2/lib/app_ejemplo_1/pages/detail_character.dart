@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todov2/app_ejemplo_1/controller/User.dart';
+import 'package:todov2/app_ejemplo_1/controller/Character.dart';
 
 class DetailCharacter extends StatefulWidget {
   @override
@@ -11,7 +11,7 @@ class DetailCharacter extends StatefulWidget {
 class _DetailCharacter extends State<DetailCharacter> {
   @override
   Widget build(BuildContext context) {
-    User args = ModalRoute.of(context)?.settings.arguments as User;
+    Character args = ModalRoute.of(context)?.settings.arguments as Character;
 
     String characterName = ModalRoute.of(context)?.settings.arguments as String;
 

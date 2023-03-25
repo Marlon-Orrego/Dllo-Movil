@@ -18,14 +18,6 @@ class MyApp extends StatelessWidget {
       ),
       home: MainAppEjemplo1(),
       routes: {'detail_character': (context) => DetailCharacter()},
-      //  Scaffold(
-      //     appBar: AppBar(
-      //       title: const Text("To Do"),
-      //       titleSpacing: 100,
-      //     ),
-      //     body:ButtonBase(),
-
-      //  )
     );
   }
 }

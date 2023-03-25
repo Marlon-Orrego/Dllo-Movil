@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:todov2/app_ejemplo_1/pages/home.dart';
-import 'package:todov2/app_ejemplo_1/pages/character.dart';
 import 'package:todov2/app_ejemplo_1/pages/list_characters.dart';
 import 'package:flutter/services.dart';
 
@@ -16,7 +15,7 @@ class MainAppEjemplo1 extends StatefulWidget {
 }
 
 class _MainAppEjemplo1 extends State<MainAppEjemplo1> {
-  final List<Widget> pages = [Home(), Character(), ListCharacters()];
+  final List<Widget> pages = [Home(), ListCharacters()];
   int currentlyIndex = 0;
 
   void changePage(int index) {
@@ -53,14 +52,6 @@ class _MainAppEjemplo1 extends State<MainAppEjemplo1> {
                 Icons.home,
                 color: Colors.white,
               ),
-            ),
-            BottomNavigationBarItem(
-              label: "DAREDEVIL",
-              icon: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-              backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
               label: "PERSONAJES",
