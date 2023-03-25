@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My App',
+      title: 'Marvel Api by Marlon Orrego',
       home: Home(),
     );
   }
@@ -42,6 +42,14 @@ class Home extends StatelessWidget {
                   color: Colors.white,
                   fontFamily: 'MarvelRegular',
                   fontSize: 30.0),
+            ),
+            SizedBox(height: 5.0),
+            Text(
+              'BY MARLON ORREGO',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'MarvelRegular',
+                  fontSize: 15.0),
             ),
           ],
         ),
