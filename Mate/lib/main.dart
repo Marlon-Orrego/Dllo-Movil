@@ -1,3 +1,4 @@
+import 'package:bankingapp/screens/login/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:bankingapp/screens/pages.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
       title: 'Mate',
-      home: seenOnboard == true ? const HomeScreen() : const OnboardingPage(),
+      home: seenOnboard == true ? LoginPage() : const OnboardingPage(),
     );
   }
 }

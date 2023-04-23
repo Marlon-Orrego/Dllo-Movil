@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bankingapp/app_styles.dart';
 import 'package:bankingapp/size_configs.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:lottie/lottie.dart';
+import 'package:bankingapp/screens/login/HomeScreen.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:bankingapp/main.dart';
@@ -156,6 +155,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                       milliseconds: 400,
                                     ),
                                     curve: Curves.easeInOut,
+                                  );
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginPage(),
+                                    ),
                                   );
                                 },
                                 buttonColor: kYellowColor,
