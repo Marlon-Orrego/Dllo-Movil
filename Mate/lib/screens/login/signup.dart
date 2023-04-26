@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:bankingapp/animation/FadeAnimation.dart';
 
 class SignupPage extends StatelessWidget {
@@ -135,3 +135,4 @@ class SignupPage extends StatelessWidget {
     );
   }
 }
+*/

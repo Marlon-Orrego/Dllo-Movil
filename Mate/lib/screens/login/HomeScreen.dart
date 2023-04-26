@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:bankingapp/animation/FadeAnimation.dart';
 import 'package:bankingapp/screens/login/login.dart';
@@ -118,4 +118,4 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-}
+}*/
