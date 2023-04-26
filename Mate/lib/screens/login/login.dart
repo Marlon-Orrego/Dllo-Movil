@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:bankingapp/animation/FadeAnimation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -170,9 +170,9 @@ class _LoginPageState extends State<LoginPage> {
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey.withOpacity(0.4))),
+              borderSide: BorderSide(color: Colors.grey)),
             border: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey.withOpacity(0.4))),
+                borderSide: BorderSide(color: Colors.grey)),
           ),
         ),
         SizedBox(
@@ -182,3 +182,4 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+*/

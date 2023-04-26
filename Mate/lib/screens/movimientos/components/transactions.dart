@@ -92,6 +92,22 @@ class Transactions extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
+<<<<<<< HEAD
+=======
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Recent Transactions',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                ),
+              ),
+              Icon(Icons.arrow_forward),
+            ],
+          ),
+>>>>>>> cc34b65a3334f5e62cc3c31d1bddc3959650cd49
         ),
         SizedBox(height: 10.0),
         ListView.builder(
