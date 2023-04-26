@@ -1,3 +1,4 @@
+import 'package:bankingapp/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:bankingapp/app_styles.dart';
 import 'package:bankingapp/size_configs.dart';
@@ -159,7 +160,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => LoginPage(),
+                                      builder: (context) => HomeScreen(),
                                     ),
                                   );
                                 },

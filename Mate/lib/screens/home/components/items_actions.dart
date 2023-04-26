@@ -1,3 +1,4 @@
+import 'package:bankingapp/screens/movimientos/movimientos.dart';
 import 'package:flutter/material.dart';
 import 'item_action.dart';
 
@@ -17,6 +18,13 @@ class ActionItems extends StatelessWidget {
                   iconPath: "assets/icons/statistics.svg",
                   title: "Análisis",
                   press: () {},
+                  navigate: (BuildContext context) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => HomeScreenMovimientos()),
+                    );
+                  },
                 ),
                 SizedBox(
                   width: 20,
@@ -25,6 +33,13 @@ class ActionItems extends StatelessWidget {
                   iconPath: "assets/icons/payh.svg",
                   title: "Historial Gastos",
                   press: () {},
+                  navigate: (BuildContext context) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => HomeScreenMovimientos()),
+                    );
+                  },
                 ),
                 SizedBox(
                   width: 20,
@@ -33,6 +48,13 @@ class ActionItems extends StatelessWidget {
                   iconPath: "assets/icons/saves.svg",
                   title: "Ahorro",
                   press: () {},
+                  navigate: (BuildContext context) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => HomeScreenMovimientos()),
+                    );
+                  },
                 ),
               ],
             ),
@@ -46,6 +68,13 @@ class ActionItems extends StatelessWidget {
                   iconPath: "assets/icons/pay.svg",
                   title: "Gestión Gastos",
                   press: () {},
+                  navigate: (BuildContext context) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => HomeScreenMovimientos()),
+                    );
+                  },
                 ),
               ],
             ),

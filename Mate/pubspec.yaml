@@ -38,7 +38,13 @@ dependencies:
   google_fonts: ^4.0.3
   shared_preferences: ^2.1.0
   lottie: ^1.1.0
-  simple_animations: ^5.0.0+3
+  simple_animations: ^4.2.0
+  flutter_sequence_animation: ^4.0.0
+  firebase_core: ^2.9.0
+  firebase_auth: ^4.4.0
+  cloud_firestore: ^4.5.0
+  #firebase_auth: ^3.3.3
+  #firebase_core: ^1.10.4
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +71,8 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - assets/
+    - assets/illustration.png
+    - assets/background.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

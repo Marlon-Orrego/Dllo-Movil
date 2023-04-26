@@ -1,7 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:bankingapp/animation/FadeAnimation.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  Future<void> _signInWithEmailAndPassword() async {
+    try {
+      final auth = FirebaseAuth.instance;
+      final userCredential = await auth.signInWithEmailAndPassword(
+          email: _emailController.text.trim(),
+          password: _passwordController.text.trim());
+      final user = userCredential.user;
+      // Do something with user
+    } on FirebaseAuthException catch (e) {
+      // Handle error
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,7 +31,6 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.light,
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
@@ -37,7 +58,7 @@ class LoginPage extends StatelessWidget {
                       FadeAnimation(
                           1,
                           Text(
-                            "Login",
+                            "Iniciar Sesión",
                             style: TextStyle(
                                 fontSize: 30, fontWeight: FontWeight.bold),
                           )),
@@ -47,7 +68,7 @@ class LoginPage extends StatelessWidget {
                       FadeAnimation(
                           1.2,
                           Text(
-                            "Login to your account",
+                            "Ingresa tus datos",
                             style: TextStyle(
                                 fontSize: 15, color: Colors.grey[700]),
                           )),
@@ -57,9 +78,16 @@ class LoginPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 40),
                     child: Column(
                       children: <Widget>[
-                        FadeAnimation(1.2, makeInput(label: "Email")),
-                        FadeAnimation(1.3,
-                            makeInput(label: "Password", obscureText: true)),
+                        FadeAnimation(
+                            1.2,
+                            makeInput(
+                                label: "Email", controller: _emailController)),
+                        FadeAnimation(
+                            1.3,
+                            makeInput(
+                                label: "Contraseña",
+                                obscureText: true,
+                                controller: _passwordController)),
                       ],
                     ),
                   ),
@@ -80,13 +108,13 @@ class LoginPage extends StatelessWidget {
                           child: MaterialButton(
                             minWidth: double.infinity,
                             height: 60,
-                            onPressed: () {},
+                            onPressed: _signInWithEmailAndPassword,
                             color: Colors.greenAccent,
                             elevation: 0,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50)),
                             child: Text(
-                              "Login",
+                              "Iniciar Sesión",
                               style: TextStyle(
                                   fontWeight: FontWeight.w600, fontSize: 18),
                             ),
@@ -98,9 +126,9 @@ class LoginPage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text("Don't have an account?"),
+                          Text("No tienes una cuenta?"),
                           Text(
-                            "Sign up",
+                            "Registrate",
                             style: TextStyle(
                                 fontWeight: FontWeight.w600, fontSize: 18),
                           ),
@@ -124,7 +152,7 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Widget makeInput({label, obscureText = false}) {
+  Widget makeInput({label, obscureText = false, controller}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -137,13 +165,14 @@ class LoginPage extends StatelessWidget {
           height: 5,
         ),
         TextField(
+          controller: controller,
           obscureText: obscureText,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey[400])),
+                borderSide: BorderSide(color: Colors.grey.withOpacity(0.4))),
             border: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey[400])),
+                borderSide: BorderSide(color: Colors.grey.withOpacity(0.4))),
           ),
         ),
         SizedBox(

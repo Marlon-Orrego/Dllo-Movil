@@ -1,3 +1,4 @@
+import 'package:bankingapp/controllers/firebase.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:bankingapp/animation/FadeAnimation.dart';
 
@@ -9,7 +10,6 @@ class SignupPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.light,
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
@@ -106,7 +106,7 @@ class SignupPage extends StatelessWidget {
     );
   }
 
-  Widget makeInput({label, obscureText = false}) {
+  Widget makeInput({label, entrada, obscureText = false}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[

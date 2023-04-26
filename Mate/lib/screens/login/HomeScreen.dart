@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:bankingapp/animation/FadeAnimation.dart';
 import 'package:bankingapp/screens/login/login.dart';
 import 'package:bankingapp/screens/login/signup.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: HomePage(),
-  ));
-}
+class HomeLoginPage extends StatelessWidget {
+  const HomeLoginPage({Key? key}) : super(key: key);
 
-class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,20 +23,13 @@ class HomePage extends StatelessWidget {
                   FadeAnimation(
                       1,
                       Text(
-                        "Welcome",
+                        "Bienvenido",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 30),
                       )),
                   SizedBox(
                     height: 20,
                   ),
-                  FadeAnimation(
-                      1.2,
-                      Text(
-                        "Automatic identity verification which enables you to verify your identity",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.grey[700], fontSize: 15),
-                      )),
                 ],
               ),
               FadeAnimation(
@@ -70,7 +57,7 @@ class HomePage extends StatelessWidget {
                             side: BorderSide(color: Colors.black),
                             borderRadius: BorderRadius.circular(50)),
                         child: Text(
-                          "Login",
+                          "Iniciar Sesión",
                           style: TextStyle(
                               fontWeight: FontWeight.w600, fontSize: 18),
                         ),
@@ -104,7 +91,7 @@ class HomePage extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50)),
                           child: Text(
-                            "Sign up",
+                            "Registrarse",
                             style: TextStyle(
                                 fontWeight: FontWeight.w600, fontSize: 18),
                           ),

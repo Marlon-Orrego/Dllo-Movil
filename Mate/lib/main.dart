@@ -1,13 +1,20 @@
 import 'package:bankingapp/screens/login/HomeScreen.dart';
+import 'package:bankingapp/screens/login/login.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:bankingapp/screens/pages.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'firebase_options.dart';
 
 bool? seenOnboard;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  ;
 
   // show status bar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [
@@ -31,7 +38,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
       title: 'Mate',
-      home: seenOnboard == true ? LoginPage() : const OnboardingPage(),
+      home: seenOnboard == true ? HomeScreen() : const OnboardingPage(),
     );
   }
 }
