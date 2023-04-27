@@ -43,6 +43,10 @@ dependencies:
   firebase_core: ^2.9.0
   firebase_auth: ^4.4.0
   cloud_firestore: ^4.5.0
+  fl_chart: ^0.35.0
+  flutter_icons_null_safety: ^1.1.0
+  percent_indicator: ^4.2.3
+  animated_bottom_navigation_bar: ^1.2.0
   #firebase_auth: ^3.3.3
   #firebase_core: ^1.10.4
 
