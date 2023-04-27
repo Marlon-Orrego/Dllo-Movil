@@ -1,4 +1,8 @@
+import 'package:bankingapp/screens/budget_page.dart';
+import 'package:bankingapp/screens/daily_page.dart';
 import 'package:bankingapp/screens/movimientos/movimientos.dart';
+import 'package:bankingapp/screens/root_app.dart';
+import 'package:bankingapp/screens/stats_page.dart';
 import 'package:flutter/material.dart';
 import 'item_action.dart';
 
@@ -21,8 +25,7 @@ class ActionItems extends StatelessWidget {
                   navigate: (BuildContext context) {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => HomeScreenMovimientos()),
+                      MaterialPageRoute(builder: (context) => StatsPage()),
                     );
                   },
                 ),
@@ -51,8 +54,7 @@ class ActionItems extends StatelessWidget {
                   navigate: (BuildContext context) {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => HomeScreenMovimientos()),
+                      MaterialPageRoute(builder: (context) => RootApp()),
                     );
                   },
                 ),
@@ -71,8 +73,7 @@ class ActionItems extends StatelessWidget {
                   navigate: (BuildContext context) {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => HomeScreenMovimientos()),
+                      MaterialPageRoute(builder: (context) => DailyPage()),
                     );
                   },
                 ),
