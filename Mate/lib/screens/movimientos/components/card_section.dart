@@ -61,8 +61,3 @@ class _CardSectionState extends State<CardSection> {
     );
   }
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cc34b65a3334f5e62cc3c31d1bddc3959650cd49
