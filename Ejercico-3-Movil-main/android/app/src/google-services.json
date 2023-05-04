@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "434794645304",
+    "project_id": "autenticacionejercicio",
+    "storage_bucket": "autenticacionejercicio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434794645304:android:09556c0aab2950d84ae3cd",
+        "android_client_info": {
+          "package_name": "com.example.ejercicio_grid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434794645304-p5vr3j2g8o6nq85g8b1jliu098t02r0e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ejercicio_grid",
+            "certificate_hash": "a7bea6d395c5012e33e514f349fea02fb931d522"
+          }
+        },
+        {
+          "client_id": "434794645304-18tmlaggicmf577ks0lrdaooquldr6nb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFsyh2jnKF8BOHPqJgFT53r-i79THtFSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434794645304-18tmlaggicmf577ks0lrdaooquldr6nb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
